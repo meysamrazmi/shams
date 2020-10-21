@@ -1408,7 +1408,7 @@ a {
           height: 40px;
         }
         > li:nth-child(2) {
-          display: none;
+          //display: none;
         }
       }
     }
@@ -1425,7 +1425,7 @@ a {
     ul{
       height: 85px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: stretch;
       margin: 0 0 0 0px;
       padding: 0;

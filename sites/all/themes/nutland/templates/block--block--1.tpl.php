@@ -25,28 +25,30 @@ $lang = $language->language;
     <section id="cards_footer">
       <div class="container">
         <div class="card-header">
-          <a href="/" class="logo_footer">
+          <a href="/" class="logo_footer" style="text-align: center">
             <?php
             if($lang == 'fa'){
-              echo '<img src="http://tadbir.offerbama.com/sites/default/files/logo-header.png" alt="گروه توسعه اقتصادی تدبیر" title="گروه توسعه اقتصادی تدبیر">';
+              echo '<img src="/sites/default/files/logo-header.png" alt="گروه سرمایه شمس ماندگار" title="گروه سرمایه شمس ماندگار" style="height: auto; max-width: 100px">';
             }
             else {
-              echo '<img src="http://tadbir.offerbama.com/sites/default/files/logo-header.png" alt="TADBIR ECONOMIC DEVELOPMENT GROUP" title="TADBIR ECONOMIC DEVELOPMENT GROUP">';
+              echo '<img src="/sites/default/files/logo-header.png" alt="MANDEGAR SHAMS FUND GROUP" title="MANDEGAR SHAMS FUND GROUP">';
             }
             ?>
           </a>
         </div>
         <div class="row mx-n4">
-          <div class="col-md-4 px-4 col-sm-12 col-xs-12 texti">
-            <article class="cards cardi card-none contextual-links-region">
-              <?php render_contextual_link_by_nid($node1->nid);?>
-              <div class="card-body">
-                <p class="text-justify">
-                  <?php print $node1->body[$lang][0]['value']; ?>
-                </p>
-              </div>
-            </article>
-          </div>
+
+<!--          <div class="col-md-4 px-4 col-sm-12 col-xs-12 texti">-->
+<!--            <article class="cards cardi card-none contextual-links-region">-->
+<!--              --><?php //render_contextual_link_by_nid($node1->nid);?>
+<!--              <div class="card-body">-->
+<!--                <p class="text-justify">-->
+<!--                  --><?php //print $node1->body[$lang][0]['value']; ?>
+<!--                </p>-->
+<!--              </div>-->
+<!--            </article>-->
+<!--          </div>-->
+
           <div class="col-md-3 mt-md-0 mt-3 px-4 col-sm-12 col-xs-12 linki contextual-links-region" >
             <article class="cards card-none">
               <?php render_contextual_link_by_menu('menu-footer');?>
@@ -77,11 +79,11 @@ $lang = $language->language;
       <div class="container">
         <p class="text-center">
           <a class="name-co" href="/" target="_blank" style="border-bottom: 1px solid #fff;width: 430px;margin: auto;max-width: 100%;">
-            <?php echo $lang == 'fa' ? 'تمامی حقوق متعلق به گروه توسعه اقتصادی تدبیر می باشد' : 'All Rights Reserved Ror TADBIR ECONOMIC DEVELOPMENT GROUP';?>
+            <?php echo $lang == 'fa' ? 'تمامی حقوق متعلق به گروه سرمایه شمس ماندگار می باشد' : 'All Rights Reserved For MANDEGAR SHAMS FUND GROUP';?>
           </a>
-          <a class="name-co" href="https://www.tusi.co/" target="_blank" style="direction: ltr; margin-top: 5px;">
-            <span style="padding: 10px 10px 0 0;"> Design and Development by</span> <img src="/sites/all/themes/nutland/images/tusi.svg" style="width: 40px;filter: brightness(1);vertical-align: top;display: inline-block;">
-          </a>
+<!--          <a class="name-co" href="https://www.tusi.co/" target="_blank" style="direction: ltr; margin-top: 5px;">-->
+<!--            <span style="padding: 10px 10px 0 0;"> Design and Development by</span> <img src="/sites/all/themes/nutland/images/tusi.svg" style="width: 40px;filter: brightness(1);vertical-align: top;display: inline-block;">-->
+<!--          </a>-->
         </p>
       </div>
     </section>

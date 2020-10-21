@@ -37,9 +37,7 @@ $lang = $language->language;
   }
   ?>
   <section id="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2645.9487698538337!2d51.41660390238768!3d35.73155633965012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e014e96cc6c55%3A0x3124d88e89ed2139!2sTadbir%20Economical%20Development%20Group!5e0!3m2!1sen!2sus!4v1594055325516!5m2!1sen!2sus"
-            width="1920" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-    </iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1619.9764266378988!2d51.3892667581437!3d35.70277779504725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQyJzEwLjAiTiA1McKwMjMnMjUuMyJF!5e0!3m2!1sen!2s!4v1603205582304!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </section>
   <section id="content">
     <div class="text">
@@ -52,20 +50,20 @@ $lang = $language->language;
             <div class="menu">
               <h4 style="padding-bottom: 0!important;border-bottom: 0!important;"><?php echo $lang == 'fa' ? 'اطلاعات تماس' : 'CONTACT INFO';?></h4>
               <div class="active"><span><?php print $node2->field_tozih['und'][0]['value']; ?></span></div>
-              <div><span> <?php print $node3->field_tozih['und'][0]['value']; ?></span></div>
-              <div><span><?php print $node4->field_tozih['und'][0]['value']; ?> </span></div>
-              <div><span><?php print $node5->field_tozih['und'][0]['value']; ?> </span></div>
-              <div><span> <?php print $node6->field_tozih['und'][0]['value']; ?> </span></div>
+<!--              <div><span> --><?php //print $node3->field_tozih['und'][0]['value']; ?><!--</span></div>-->
+<!--              <div><span>--><?php //print $node4->field_tozih['und'][0]['value']; ?><!-- </span></div>-->
+<!--              <div><span>--><?php //print $node5->field_tozih['und'][0]['value']; ?><!-- </span></div>-->
+<!--              <div><span> --><?php //print $node6->field_tozih['und'][0]['value']; ?><!-- </span></div>-->
             </div>
           </div>
           <div class="tab tab--2-of-3">
             <ul class="nacc">
               <li></li>
               <li class="active"><div class="table"><?php print $node2->body[$lang][0]['value']?></div></li>
-              <li><div class="table"><?php print $node3->body[$lang][0]['value']?></div></li>
-              <li><div class="table"><?php print $node4->body[$lang][0]['value']?></div></li>
-              <li><div class="table"><?php print $node5->body[$lang][0]['value']?></div></li>
-              <li><div class="table"><?php print $node6->body[$lang][0]['value']?></div></li>
+<!--              <li><div class="table">--><?php //print $node3->body[$lang][0]['value']?><!--</div></li>-->
+<!--              <li><div class="table">--><?php //print $node4->body[$lang][0]['value']?><!--</div></li>-->
+<!--              <li><div class="table">--><?php //print $node5->body[$lang][0]['value']?><!--</div></li>-->
+<!--              <li><div class="table">--><?php //print $node6->body[$lang][0]['value']?><!--</div></li>-->
             </ul>
           </div>
         </div>
@@ -108,16 +106,16 @@ $lang = $language->language;
       print render($block['content']);
       ?>
     </div>
-    <h4 class="hbottom"><?php echo $lang == 'fa' ? 'گروه اقتصادی تدبیر در شبکه های اجتماعی :' : 'Social Media:';?></h4>
-    <div class="social">
-      <ul class="list" style="padding-right: 0px;">
-        <a href=""> <li class="social1"></li></a>
-        <a href=""> <li class="social2"></li></a>
-        <a href=""> <li class="social3"></li></a>
-        <a href=""> <li class="social4"></li></a>
-        <a href=""> <li class="social5"></li></a>
-      </ul>
-    </div>
+<!--    <h4 class="hbottom">--><?php //echo $lang == 'fa' ? 'گروه سرمایه شمس ماندگار در شبکه های اجتماعی :' : 'Social Media:';?><!--</h4>-->
+<!--    <div class="social">-->
+<!--      <ul class="list" style="padding-right: 0px;">-->
+<!--        <a href=""> <li class="social1"></li></a>-->
+<!--        <a href=""> <li class="social2"></li></a>-->
+<!--        <a href=""> <li class="social3"></li></a>-->
+<!--        <a href=""> <li class="social4"></li></a>-->
+<!--        <a href=""> <li class="social5"></li></a>-->
+<!--      </ul>-->
+<!--    </div>-->
   </section>
   <?php
   // Hide comments, tags, and links now so that we can render them later.
