@@ -10,7 +10,7 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
     <div class="navbar-header">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="py-2" style="height: auto;width: 70px;"/>
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="py-2" style="height: auto;width: auto;"/>
         </a>
       <?php endif; ?>
 

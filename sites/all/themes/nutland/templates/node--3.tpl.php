@@ -308,7 +308,7 @@ $lang = $language->language;
     justify-content: space-between;
   }
   #last .view-news .views-field-created > span span:first-child {
-    color: #253A76;
+    color: #202cf0;
     font-weight: bold;
   }
   #last .view-news .views-field-title a {
@@ -408,7 +408,7 @@ $lang = $language->language;
     -ms-flex-pack: end;
     justify-content: flex-end;
     transition: width .5s ease-in-out;
-    background-color: rgba(0, 36, 122, .5);
+    background-color: rgba(32, 44, 240, .5);
     padding-bottom: 1.875rem;
     -webkit-transition: all .5s ease-in-out;
     right: 4px;
@@ -430,7 +430,7 @@ $lang = $language->language;
     width: 200px
   }
   #last .items_text:hover .caption_wrap {
-    background-color: rgba(0, 36, 122, .9)
+    background-color: rgba(32, 44, 240, .9)
   }
   #last .items_text:before {
     content: "";
@@ -510,7 +510,7 @@ $lang = $language->language;
     display: block;
     width: 0px;
     transition: width .3s ease-in-out;
-    background-color: #F95109;
+    background-color: #f9bd38;
     -webkit-transition: width .3s ease-in-out;
   }
   #gozideha .items:hover .caption h4:before {
@@ -562,7 +562,7 @@ $lang = $language->language;
     -ms-flex-pack: end;
     justify-content: flex-end;
     transition: width .5s ease-in-out;
-    background-color: rgba(0, 36, 122, .5);
+    background-color: rgba(32, 44, 240, .5);
     padding-bottom: 1.875rem;
     -webkit-transition: width .5s ease-in-out;
     right: 4px
@@ -576,7 +576,7 @@ $lang = $language->language;
   }
   #gozideha .items_text:hover .caption_wrap {
     width: 14.375rem;
-    background-color: rgba(0, 36, 122, .9)
+    background-color: rgba(32, 44, 240, .9)
   }
   #gozideha .items_text:before {
     content: "";

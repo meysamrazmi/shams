@@ -171,7 +171,7 @@
     .figures .caption {
       position: absolute;
       bottom: 0.625rem;
-      color: #00247a;
+      color: #202cf0;
       font-size: 18px;
       white-space: nowrap;
       display: none

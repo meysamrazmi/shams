@@ -24,30 +24,40 @@ $lang = $language->language;
   <footer id="footer">
     <section id="cards_footer">
       <div class="container">
-        <div class="card-header">
-          <a href="/" class="logo_footer" style="text-align: center">
-            <?php
-            if($lang == 'fa'){
-              echo '<img src="/sites/default/files/logo-header.png" alt="گروه سرمایه شمس ماندگار" title="گروه سرمایه شمس ماندگار" style="height: auto; max-width: 100px">';
-            }
-            else {
-              echo '<img src="/sites/default/files/logo-header.png" alt="MANDEGAR SHAMS FUND GROUP" title="MANDEGAR SHAMS FUND GROUP">';
-            }
-            ?>
-          </a>
-        </div>
+<!--        <div class="card-header">-->
+<!--          <a href="/" class="logo_footer" style="text-align: center">-->
+<!--            --><?php
+//            if($lang == 'fa'){
+//              echo '<img src="/sites/default/files/logo-header.png" alt="گروه سرمایه شمس ماندگار" title="گروه سرمایه شمس ماندگار" style="height: auto; max-width: 100px">';
+//            }
+//            else {
+//              echo '<img src="/sites/default/files/logo-header.png" alt="MANDEGAR SHAMS FUND GROUP" title="MANDEGAR SHAMS FUND GROUP">';
+//            }
+//            ?>
+<!--          </a>-->
+<!--        </div>-->
         <div class="row mx-n4">
 
-<!--          <div class="col-md-4 px-4 col-sm-12 col-xs-12 texti">-->
-<!--            <article class="cards cardi card-none contextual-links-region">-->
-<!--              --><?php //render_contextual_link_by_nid($node1->nid);?>
-<!--              <div class="card-body">-->
+          <div class="col-md-4 px-4 col-sm-12 col-xs-12 texti">
+            <div class="cards cardi card-none contextual-links-region">
+              <?php render_contextual_link_by_nid($node1->nid);?>
+              <div class="card-body" style="text-align: center;">
+                <a href="/" class="logo_footer" style="text-align: center">
+                  <?php
+                  if($lang == 'fa'){
+                    echo '<img src="/sites/default/files/logo-header.png" alt="گروه سرمایه شمس ماندگار" title="گروه سرمایه شمس ماندگار" style="height: auto; max-width: 150px">';
+                  }
+                  else {
+                    echo '<img src="/sites/default/files/logo-header.png" alt="MANDEGAR SHAMS FUND GROUP" title="MANDEGAR SHAMS FUND GROUP">';
+                  }
+                  ?>
+                </a>
 <!--                <p class="text-justify">-->
 <!--                  --><?php //print $node1->body[$lang][0]['value']; ?>
 <!--                </p>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
+              </div>
+            </div>
+          </div>
 
           <div class="col-md-3 mt-md-0 mt-3 px-4 col-sm-12 col-xs-12 linki contextual-links-region" >
             <article class="cards card-none">
@@ -78,7 +88,7 @@ $lang = $language->language;
     <section id="copyright">
       <div class="container">
         <p class="text-center">
-          <a class="name-co" href="/" target="_blank" style="border-bottom: 1px solid #fff;width: 430px;margin: auto;max-width: 100%;">
+          <a class="name-co" href="/" target="_blank" style="width: 430px;margin: auto;max-width: 100%;">
             <?php echo $lang == 'fa' ? 'تمامی حقوق متعلق به گروه سرمایه شمس ماندگار می باشد' : 'All Rights Reserved For MANDEGAR SHAMS FUND GROUP';?>
           </a>
 <!--          <a class="name-co" href="https://www.tusi.co/" target="_blank" style="direction: ltr; margin-top: 5px;">-->
@@ -100,7 +110,7 @@ $lang = $language->language;
     top: 60px;
     width: 100%;
     height: 100px;
-    background: url(/sites/all/themes/nutland/images/pattern-tadbir.png);
+    /*background: url(/sites/all/themes/nutland/images/pattern-tadbir.png);*/
     background-size: auto 100%;
     opacity: 0.2;
     z-index: -1;

@@ -91,7 +91,7 @@
   }
 
   .subset-link {
-    background: #253A76;
+    background: #202cf0;
     white-space: nowrap;
     color: #fff;
     min-width: 150px !important;
@@ -119,7 +119,7 @@
   .subsets a .caption:before {
     content: "";
     position: absolute;
-    background: #F95109;
+    background: #f9bd38;
     width: 0%;
     top: 75px;
     height: 3px;
