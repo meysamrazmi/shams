@@ -8422,7 +8422,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 
 #footer {
   background: #ddd;
-  color:#222c37;
+  color: #222c37;
   margin-top: auto;
   position: relative;
   z-index: 5;
@@ -8696,18 +8696,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   #navbar .navbar-collapse ul.menu.nav .dropdown:hover .dropdown-menu {
     height: 40px;
   }
-  #navbar .navbar-collapse ul.menu.nav > li:nth-child(2) {
-    display: none;
-  }
 }
 #navbar .left-menu {
   position: relative;
   overflow-x: hidden;
 }
 @media (min-width: 1440px) {
-  #navbar .left-menu {
-    /*width: 350px;*/
-  }
   #navbar .left-menu .subset-link {
     min-width: 300px !important;
   }
