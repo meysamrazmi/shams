@@ -20,11 +20,11 @@ $lang = $language->language;
     <?php print views_embed_view('slideshow', 'block'); ?>
   <?php endif; ?>
 
-<!--  <div class="container" id="gozideha" >-->
-<!---->
-<!--    <div class="header_title">-->
-<!--      <h5 class="mb-0">--><?php //echo t('top feed');?><!--</h5>-->
-<!--    </div>-->
+  <div class="container" id="gozideha" >
+
+    <div class="header_title">
+      <h5 class="mb-0"><?php echo t('top feed');?></h5>
+    </div>
     <?php
     if($lang == 'fa'){
       $node1 = node_load(20);
@@ -39,49 +39,49 @@ $lang = $language->language;
       $node4 = node_load(160);
     }
     ?>
-<!--    <div class="row">-->
-<!---->
-<!--      <div class="col-md-4 contextual-links-region">-->
-<!--        --><?php //render_contextual_link_by_nid($node3->nid);?>
-<!--        <a href="--><?php //print $node1->field_link['und'][0]['url']; ?><!--" class="items border_image">-->
-<!--          <img src="--><?php //print image_style_url("320x320", $node1->field_image['und'][0]['uri']); ?><!--" alt="">-->
-<!--          <div class="caption_wrap">-->
-<!--            <div class="caption">-->
-<!--              <h4>--><?php //print $node1->title; ?><!--</h4>-->
-<!--              <span>--><?php //print $node1->field_tozih['und'][0]['value']; ?><!--</span>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="line_effect"><span class="lineInner"></span></div>-->
-<!--        </a>-->
-<!--      </div>-->
-<!--      <div class="col-md-4 contextual-links-region">-->
-<!--        --><?php //render_contextual_link_by_nid($node3->nid);?>
-<!--        <a href="--><?php //print $node2->field_link['und'][0]['url']; ?><!--" class="items border_image">-->
-<!--          <img src="--><?php //print image_style_url("320x320", $node2->field_image['und'][0]['uri']); ?><!--" alt="">-->
-<!--          <div class="caption_wrap">-->
-<!--            <div class="caption">-->
-<!--              <h4>--><?php //print $node2->title; ?><!--</h4>-->
-<!--              <span>--><?php //print $node2->field_tozih['und'][0]['value']; ?><!--</span>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="line_effect"><span class="lineInner"></span></div>-->
-<!--        </a>-->
-<!--      </div>-->
-<!--      <div class="col-md-4 contextual-links-region">-->
-<!--        --><?php //render_contextual_link_by_nid($node3->nid);?>
-<!--        <a href="--><?php //print $node3->field_link['und'][0]['url']; ?><!--" class="items border_image">-->
-<!--          <img src="--><?php //print image_style_url("320x320", $node3->field_image['und'][0]['uri']); ?><!--" alt="">-->
-<!--          <div class="caption_wrap">-->
-<!--            <div class="caption">-->
-<!--              <h4>--><?php //print $node3->title; ?><!--</h4>-->
-<!--              <span>--><?php //print $node3->field_tozih['und'][0]['value']; ?><!--</span>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="line_effect"><span class="lineInner"></span></div>-->
-<!--        </a>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+    <div class="row">
+
+      <div class="col-md-4 contextual-links-region">
+        <?php render_contextual_link_by_nid($node1->nid);?>
+        <a href="<?php print $node1->field_link['und'][0]['url']; ?>" class="items border_image">
+          <img src="<?php print image_style_url("320x320", $node1->field_image['und'][0]['uri']); ?>" alt="">
+          <div class="caption_wrap">
+            <div class="caption">
+              <h4><?php print $node1->title; ?></h4>
+              <span><?php print $node1->field_tozih['und'][0]['value']; ?></span>
+            </div>
+          </div>
+          <div class="line_effect"><span class="lineInner"></span></div>
+        </a>
+      </div>
+      <div class="col-md-4 contextual-links-region">
+        <?php render_contextual_link_by_nid($node2->nid);?>
+        <a href="<?php print $node2->field_link['und'][0]['url']; ?>" class="items border_image">
+          <img src="<?php print image_style_url("320x320", $node2->field_image['und'][0]['uri']); ?>" alt="">
+          <div class="caption_wrap">
+            <div class="caption">
+              <h4><?php print $node2->title; ?></h4>
+              <span><?php print $node2->field_tozih['und'][0]['value']; ?></span>
+            </div>
+          </div>
+          <div class="line_effect"><span class="lineInner"></span></div>
+        </a>
+      </div>
+      <div class="col-md-4 contextual-links-region">
+        <?php render_contextual_link_by_nid($node3->nid);?>
+        <a href="<?php print $node3->field_link['und'][0]['url']; ?>" class="items border_image">
+          <img src="<?php print image_style_url("320x320", $node3->field_image['und'][0]['uri']); ?>" alt="">
+          <div class="caption_wrap">
+            <div class="caption">
+              <h4><?php print $node3->title; ?></h4>
+              <span><?php print $node3->field_tozih['und'][0]['value']; ?></span>
+            </div>
+          </div>
+          <div class="line_effect"><span class="lineInner"></span></div>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <div class="row" id="sectionText">
     <section>
@@ -164,90 +164,90 @@ $lang = $language->language;
 <!--    </section>-->
 <!--  </div>-->
 
-<!--  <div id="jobs">-->
-<!--    --><?php
-//    if($lang == 'fa'){
-//      $node7 = node_load(36);
-//      $node8 = node_load(34);
-//      $node9 = node_load(31);
-//      $node10 = node_load(32);
-//      $node11 = node_load(35);
-//      $node12 = node_load(33);
-//    }
-//    else {
-//      $node7 = node_load(166);
-//      $node8 = node_load(164);
-//      $node9 = node_load(161);
-//      $node10 = node_load(162);
-//      $node11 = node_load(165);
-//      $node12 = node_load(163);
-//    }
-//    ?>
-<!---->
-<!--    <section>-->
-<!--      <div class="container">-->
-<!--        <div class="header_title text-primary">-->
-<!--          <h5 class="mb-0">--><?php //echo t('main activity areas');?><!--</h5>-->
-<!--        </div>-->
-<!--        <div class="container osm owl-carousel owl-theme" style="padding: 0">-->
-<!--          <div class="contextual-links-region">-->
-<!--            --><?php //render_contextual_link_by_nid($node7->nid);?>
-<!--            <a href="--><?php //print $node7->field_link['und'][0]['url']; ?><!--" class="items_img">-->
-<!--              <img class="filter1" src="--><?php //print image_style_url("medium", $node7->field_image['und'][0]['uri']); ?><!--" alt="">-->
-<!--              <div class="text">-->
-<!--                <h4>--><?php //print $node7->title; ?><!--</h4>-->
-<!--              </div>-->
-<!--            </a>-->
-<!--          </div>-->
-<!--          <div class="contextual-links-region">-->
-<!--            --><?php //render_contextual_link_by_nid($node8->nid);?>
-<!--            <a href="--><?php //print $node8->field_link['und'][0]['url']; ?><!--" class="items_img">-->
-<!--              <img class="filter2" src="--><?php //print image_style_url("medium", $node8->field_image['und'][0]['uri']); ?><!--" alt="">-->
-<!--              <div class="text">-->
-<!--                <h4>--><?php //print $node8->title; ?><!--</h4>-->
-<!--              </div>-->
-<!--            </a>-->
-<!--          </div>-->
-<!--          <div class="contextual-links-region">-->
-<!--            --><?php //render_contextual_link_by_nid($node9->nid);?>
-<!--            <a href="--><?php //print $node9->field_link['und'][0]['url']; ?><!--" class="items_img">-->
-<!--              <img class="filter3" src="--><?php //print image_style_url("medium", $node9->field_image['und'][0]['uri']); ?><!--" alt="">-->
-<!--              <div class="text">-->
-<!--                <h4>--><?php //print $node9->title; ?><!--</h4>-->
-<!--              </div>-->
-<!--            </a>-->
-<!--          </div>-->
-<!--          <div class="contextual-links-region">-->
-<!--            --><?php //render_contextual_link_by_nid($node10->nid);?>
-<!--            <a href="--><?php //print $node10->field_link['und'][0]['url']; ?><!--" class="items_img">-->
-<!--              <img class="filter4" src="--><?php //print image_style_url("medium", $node10->field_image['und'][0]['uri']); ?><!--" alt="">-->
-<!--              <div class="text">-->
-<!--                <h4>--><?php //print $node10->title; ?><!--</h4>-->
-<!--              </div>-->
-<!--            </a>-->
-<!--          </div>-->
-<!--          <div class="contextual-links-region">-->
-<!--            --><?php //render_contextual_link_by_nid($node11->nid);?>
-<!--            <a href="--><?php //print $node11->field_link['und'][0]['url']; ?><!--" class="items_img">-->
-<!--              <img class="filter5" src="--><?php //print image_style_url("medium", $node11->field_image['und'][0]['uri']); ?><!--" alt="">-->
-<!--              <div class="text">-->
-<!--                <h4>--><?php //print $node11->title; ?><!--</h4>-->
-<!--              </div>-->
-<!--            </a>-->
-<!--          </div>-->
-<!--          <div class="contextual-links-region">-->
-<!--            --><?php //render_contextual_link_by_nid($node12->nid);?>
-<!--            <a href="--><?php //print $node12->field_link['und'][0]['url']; ?><!--" class="items_img">-->
-<!--              <img class="filter6" src="--><?php //print image_style_url("medium", $node12->field_image['und'][0]['uri']); ?><!--" alt="">-->
-<!--              <div class="text">-->
-<!--                <h4>--><?php //print $node12->title; ?><!--</h4>-->
-<!--              </div>-->
-<!--            </a>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-<!--  </div>-->
+  <div id="jobs">
+    <?php
+    if($lang == 'fa'){
+      $node7 = node_load(36);
+      $node8 = node_load(34);
+      $node9 = node_load(31);
+      $node10 = node_load(32);
+      $node11 = node_load(35);
+      $node12 = node_load(33);
+    }
+    else {
+      $node7 = node_load(166);
+      $node8 = node_load(164);
+      $node9 = node_load(161);
+      $node10 = node_load(162);
+      $node11 = node_load(165);
+      $node12 = node_load(163);
+    }
+    ?>
+
+    <section>
+      <div class="container">
+        <div class="header_title text-primary">
+          <h5 class="mb-0"><?php echo t('main activity areas');?></h5>
+        </div>
+        <div class="container osm owl-carousel owl-theme" style="padding: 0">
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node7->nid);?>
+            <a href="<?php print $node7->field_link['und'][0]['url']; ?>" class="items_img">
+              <img class="filter1" src="<?php print image_style_url("medium", $node7->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node7->title; ?></h4>
+              </div>
+            </a>
+          </div>
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node8->nid);?>
+            <a href="<?php print $node8->field_link['und'][0]['url']; ?>" class="items_img">
+              <img class="filter2" src="<?php print image_style_url("medium", $node8->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node8->title; ?></h4>
+              </div>
+            </a>
+          </div>
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node9->nid);?>
+            <a href="<?php print $node9->field_link['und'][0]['url']; ?>" class="items_img">
+              <img class="filter3" src="<?php print image_style_url("medium", $node9->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node9->title; ?></h4>
+              </div>
+            </a>
+          </div>
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node10->nid);?>
+            <a href="<?php print $node10->field_link['und'][0]['url']; ?>" class="items_img">
+              <img class="filter4" src="<?php print image_style_url("medium", $node10->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node10->title; ?></h4>
+              </div>
+            </a>
+          </div>
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node11->nid);?>
+            <a href="<?php print $node11->field_link['und'][0]['url']; ?>" class="items_img">
+              <img class="filter5" src="<?php print image_style_url("medium", $node11->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node11->title; ?></h4>
+              </div>
+            </a>
+          </div>
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node12->nid);?>
+            <a href="<?php print $node12->field_link['und'][0]['url']; ?>" class="items_img">
+              <img class="filter6" src="<?php print image_style_url("medium", $node12->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node12->title; ?></h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <?php
 
   // Hide comments, tags, and links now so that we can render them later.
@@ -308,7 +308,7 @@ $lang = $language->language;
     justify-content: space-between;
   }
   #last .view-news .views-field-created > span span:first-child {
-    color: #202cf0;
+    color: #3d4798;
     font-weight: bold;
   }
   #last .view-news .views-field-title a {
@@ -408,7 +408,7 @@ $lang = $language->language;
     -ms-flex-pack: end;
     justify-content: flex-end;
     transition: width .5s ease-in-out;
-    background-color: rgba(32, 44, 240, .5);
+    background-color: rgba(61, 71, 152, .5);
     padding-bottom: 1.875rem;
     -webkit-transition: all .5s ease-in-out;
     right: 4px;
@@ -430,7 +430,7 @@ $lang = $language->language;
     width: 200px
   }
   #last .items_text:hover .caption_wrap {
-    background-color: rgba(32, 44, 240, .9)
+    background-color: rgba(61, 71, 152, .9)
   }
   #last .items_text:before {
     content: "";
@@ -562,7 +562,7 @@ $lang = $language->language;
     -ms-flex-pack: end;
     justify-content: flex-end;
     transition: width .5s ease-in-out;
-    background-color: rgba(32, 44, 240, .5);
+    background-color: rgba(61, 71, 152, .5);
     padding-bottom: 1.875rem;
     -webkit-transition: width .5s ease-in-out;
     right: 4px
@@ -576,7 +576,7 @@ $lang = $language->language;
   }
   #gozideha .items_text:hover .caption_wrap {
     width: 14.375rem;
-    background-color: rgba(32, 44, 240, .9)
+    background-color: rgba(61, 71, 152, .9)
   }
   #gozideha .items_text:before {
     content: "";
