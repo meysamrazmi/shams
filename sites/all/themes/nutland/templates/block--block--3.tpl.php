@@ -10,31 +10,9 @@ $lang = $language->language;
   <?php endif;?>
   <?php print render($title_suffix); ?>
 
-  <div id="block3">
-    <section id="sectionBanner">
-      <div class="container" style="padding: 25px 10px;">
-        <div class="caption_slide">
-          <div class="caption_write">
-            <?php
-              $alias = drupal_get_path_alias();
-              switch ($alias){
-                case 'projects':
-                  print "<h1>". ($lang == 'fa' ? 'پروژه ها' : 'Projects') ."</h1>";
-                  break;
-                case 'news':
-                  print "<h1>". ($lang == 'fa' ? 'مرکز اخبار' : 'News') ."</h1>";
-                  break;
-              }
-            ?>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-</section>
-<?php
+  <?php
   $node = node_load(91);
+  $alias = drupal_get_path_alias();
   switch ($alias){
     case 'projects':
       $node = node_load(122);
@@ -42,8 +20,28 @@ $lang = $language->language;
     case 'news':
       $node = node_load(91);
       break;
+    case 'videos':
+      $node = node_load(93);
+      break;
+    case 'gallery':
+      $node = node_load(92);
+      break;
   }
-?>
+  ?>
+  <div id="block3">
+    <section id="sectionBanner">
+      <div class="container" style="padding: 25px 10px;">
+        <div class="caption_slide">
+          <div class="caption_write contextual-links-region">
+            <?php render_contextual_link_by_nid($node->nid);?>
+            <h1><?php echo $node->title; ?></h1>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</section>
 <style>
   #block-block-3{
     width: 100vw;

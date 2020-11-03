@@ -46,6 +46,9 @@ foreach ($items as $delta => $item){
                 break;
               case 'main_header':
                 break;
+              case 'tabs':
+                costum_collection_tabs($entity);
+                break;
               default:
                 print render($item);
             };

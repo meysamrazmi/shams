@@ -75,7 +75,7 @@ $lang = $language->language;
           </div>
           <div class="col-md-4  col-sm-12 col-xs-12">
             <article class="cards card-none contextual-links-region">
-              <?php render_contextual_link_by_nid($node1->nid);?>
+              <?php render_contextual_link_by_nid($node2->nid);?>
               <div class="">
                 <h4 class="card-title"><?php echo $lang == 'fa' ? 'اطلاعات تماس' : 'CONTACT';?></h4>
               </div>

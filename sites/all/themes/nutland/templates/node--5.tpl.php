@@ -175,30 +175,28 @@ $lang = $language->language;
 </style>
 <script>
   // tab  info
-  $(document).on("click", ".tab-info .menu div", function() {
+  $(document).on('click', '.tab-info .menu div', function() {
     var numberIndex = $(this).index();
     tabs(numberIndex)
   });
   function tabs(numberIndex) {
-    if (!$(this).is("active")) {
-      $(".tab-info .menu div").removeClass("active");
-      $(".tab-info ul li").removeClass("active");
-      $(this).addClass("active");
-      $(".tab-info ul").find("li:eq(" + numberIndex + ")").addClass("active");
-      var listItemHeight = $(".tab-info ul")
-        .find("li:eq(" + numberIndex + ")")
+    if (!$(this).is('active')) {
+      $('.tab-info .menu div').removeClass('active');
+      $('.tab-info ul li').removeClass('active');
+      $(this).addClass('active');
+      $('.tab-info ul').find('li:eq(' + numberIndex + ')').addClass('active');
+      var listItemHeight = $('.tab-info ul')
+        .find('li:eq(' + numberIndex + ')')
         .innerHeight();
-      $(".tab-info ul").height(listItemHeight + "px");
+      $('.tab-info ul').height(listItemHeight + 'px');
     }
-
   }
   $('.tab-content').hide();
   $('#tab-1').show();
   $('#select-box').change(function () {
     dropdown = $('#select-box').val();
     $('.tab-content').hide();
-    $('#' + "tab-" + dropdown).show();
+    $('#tab-' + dropdown).show();
   });
-
 </script>
 
