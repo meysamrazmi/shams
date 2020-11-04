@@ -316,14 +316,14 @@ $(".node-type-projects.not-front").ready(function () {
   $('.owl-carousel').click(videoPlay);
 });
 //fix header on scroll
-$(window).scroll(function(){
-  let sticky = $('.navbar-fixed-top'),
-    scroll = $(window).scrollTop();
-  if (scroll > 0){
-    $('body').addClass('fixed');
-    sticky.addClass('fixed');
-  } else {
-    $("body").removeClass('fixed');
-    sticky.removeClass('fixed');
-  }
-});
+// $(window).scroll(function(){
+//   let sticky = $('.navbar-fixed-top'),
+//     scroll = $(window).scrollTop();
+//   if (scroll > 0){
+//     $('body').addClass('fixed');
+//     sticky.addClass('fixed');
+//   } else {
+//     $("body").removeClass('fixed');
+//     sticky.removeClass('fixed');
+//   }
+// });

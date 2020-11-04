@@ -164,7 +164,7 @@ $lang = $language->language;
 <!--    </section>-->
 <!--  </div>-->
 
-<!--  <div id="jobs">-->
+  <div id="jobs">
     <?php
     if($lang == 'fa'){
       $node7 = node_load(36);
@@ -408,7 +408,7 @@ $lang = $language->language;
     -ms-flex-pack: end;
     justify-content: flex-end;
     transition: width .5s ease-in-out;
-    background-color: rgba(32, 44, 240, .5);
+    background-color: rgba(61, 71, 152, .5);
     padding-bottom: 1.875rem;
     -webkit-transition: all .5s ease-in-out;
     right: 4px;
@@ -430,7 +430,7 @@ $lang = $language->language;
     width: 200px
   }
   #last .items_text:hover .caption_wrap {
-    background-color: rgba(32, 44, 240, .9)
+    background-color: rgba(61, 71, 152, .9)
   }
   #last .items_text:before {
     content: "";
@@ -562,7 +562,7 @@ $lang = $language->language;
     -ms-flex-pack: end;
     justify-content: flex-end;
     transition: width .5s ease-in-out;
-    background-color: rgba(32, 44, 240, .5);
+    background-color: rgba(61, 71, 152, .5);
     padding-bottom: 1.875rem;
     -webkit-transition: width .5s ease-in-out;
     right: 4px
@@ -576,7 +576,7 @@ $lang = $language->language;
   }
   #gozideha .items_text:hover .caption_wrap {
     width: 14.375rem;
-    background-color: rgba(32, 44, 240, .9)
+    background-color: rgba(61, 71, 152, .9)
   }
   #gozideha .items_text:before {
     content: "";
