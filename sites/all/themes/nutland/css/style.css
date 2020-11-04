@@ -7311,7 +7311,7 @@ td.visible-print {
 }
 
 .main-container.container {
-  min-height: calc(100vh - 400px);
+  min-height: calc(100vh - 401px);
 }
 
 .alert-success {
@@ -8560,8 +8560,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   display: none;
 }
 #navbar a.logo img {
-  width: 230px;
-  max-height: 69px !important;
+  max-height: 80px !important;
   padding: 0 !important;
   transition: all 0.3s ease;
 }
@@ -8573,17 +8572,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 #navbar .navbar-collapse {
   z-index: 100;
-  max-width: calc(100% - 245px - 220px);
+  max-width: calc(100% - 75px - 50px);
   margin-right: 1.5%;
 }
 .i18n-en #navbar .navbar-collapse {
   margin-right: 0;
   margin-left: 1.5%;
-}
-@media (max-width: 899px) and (min-width: 768px) {
-  #navbar .navbar-collapse {
-    max-width: calc(100% - 245px - 180px);
-  }
 }
 @media (max-width: 767px) {
   #navbar .navbar-collapse {
@@ -8820,8 +8814,8 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   #navbar a.logo img {
     width: auto;
     max-height: 60px !important;
-    transform: scale(0.8);
-    margin-top: -5px;
+    transform: scale(0.86);
+    margin-top: -4px;
   }
   #navbar ul.menu.nav {
     display: block !important;
@@ -8966,23 +8960,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     font-size: 12px;
     padding: 10px 6px;
   }
-  #navbar .left-menu {
-    width: 160px !important;
-  }
-  #navbar .left-menu li {
-    min-width: 40px !important;
-  }
-  #navbar .left-menu i {
-    margin-right: 5px !important;
-  }
   #navbar .left-menu #lang {
     margin-right: 0 !important;
   }
 }
 @media (min-width: 900px) and (max-width: 999px) {
-  #navbar .container.px-5 .navbar-collapse ul.dropdown-menu li:nth-child(7) {
-    display: block !important;
-  }
   #navbar .container.px-5 .navbar-collapse ul.dropdown-menu li a {
     padding: 10px 15px !important;
     margin-right: 25px;
@@ -8990,9 +8972,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   #navbar .container.px-5 .navbar-collapse li {
     padding: 0 !important;
     font-size: 12px;
-  }
-  #navbar .container.px-5 .navbar-collapse li:nth-child(7) {
-    display: none;
   }
   #navbar .container.px-5 .navbar-collapse li a {
     padding: 10px 6px;
@@ -9155,7 +9134,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   width: 0;
   height: 4px;
   top: 60px;
-  background: #ffc20e;
+  background: #f9c211;
   transition: all 0.3s ease;
 }
 #node-3 .view-id-slideshow .owl-item .field-content:hover, #node-74 .view-id-slideshow .owl-item .field-content:hover {
@@ -9193,20 +9172,36 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   background-color: #f9bd38;
 }
 #node-3 #sectionText, #node-74 #sectionText {
-  background: #3d4798;
+  background: #eee;
   text-align: center;
   margin: 50px 0;
-  color: #fff;
+  /* color: #fff;*/
 }
 #node-3 #sectionText section, #node-74 #sectionText section {
   padding: 70px 0;
 }
 #node-3 #sectionText section .container .article, #node-74 #sectionText section .container .article {
-  border: 1px solid #fff;
+  border: 1px solid #3d4798;
   padding: 20px 0;
 }
+#node-3 #sectionText section .container .article h3, #node-74 #sectionText section .container .article h3 {
+  position: relative;
+  margin-bottom: 50px;
+  color: #313a7d;
+}
+#node-3 #sectionText section .container .article h3:before, #node-74 #sectionText section .container .article h3:before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 3px;
+  background: #FFC107;
+  /* background: #fff; */
+  /* box-shadow: 0px 0px 3px #FFC107, 0px 0px 3px #FFC107, 0px 0px 3px #FFC107, 0px 0px 3px #FFC107, 0px 0px 3px #FFC107; */
+  right: calc(50% - 75px);
+  bottom: -20px;
+}
 #node-3 #sectionText section .container .article p, #node-74 #sectionText section .container .article p {
-  border: 2px solid #fff;
+  border: 2px solid #3d4798;
   border-width: 0 2px;
   line-height: 2;
   font-size: 14px;
@@ -9250,7 +9245,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   overflow: hidden;
 }
 #node-3 #projects .view-content .views-row:hover .views-field-title, #node-74 #projects .view-content .views-row:hover .views-field-title {
-  background: rgba(32, 44, 240, 0.9);
+  background: rgba(61, 71, 152, 0.9);
 }
 #node-3 #projects .view-content .views-row:hover img, #node-74 #projects .view-content .views-row:hover img {
   transform: scale(1.05);
@@ -9266,7 +9261,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 #node-3 #projects .view-content .views-row .views-field-title, #node-74 #projects .view-content .views-row .views-field-title {
   width: 100%;
   bottom: 0;
-  background: rgba(32, 44, 240, 0.5);
+  background: rgba(61, 71, 152, 0.5);
   position: absolute;
   min-height: 75px;
   transition: all 0.4s ease-in-out;
@@ -12271,7 +12266,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items .group-header h2 {
   width: 100%;
   bottom: 95px;
-  background: rgba(32, 44, 240, 0.5);
+  background: rgba(61, 71, 152, 0.5);
   position: relative;
   min-height: 75px;
   color: white;
