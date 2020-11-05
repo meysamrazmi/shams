@@ -7300,6 +7300,11 @@ td.visible-print {
     display: none !important;
   }
 }
+@media all and (min-width: 1500px) {
+  .container {
+    width: 1450px;
+  }
+}
 #navbar.fixed:not(.resp) .px-5, #navbar.fixed:not(.resp) .left-menu ul {
   height: 50px !important;
 }
@@ -9153,22 +9158,24 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   display: flex;
   margin-top: 20px;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
 }
 #node-3 .header_title .mb-0, #node-74 .header_title .mb-0 {
-  font-size: 18px;
-  margin: 0 10px;
+  font-size: 20px;
+  margin: 0 auto;
   color: #3d4798;
   font-weight: bold;
   text-transform: uppercase;
 }
 #node-3 .header_title:after, #node-3 .header_title:before, #node-74 .header_title:after, #node-74 .header_title:before {
   content: "";
-  height: 2px;
-  -webkit-box-flex: 1;
-  -ms-flex: auto;
-  flex: auto;
-  display: block;
+  height: 3px;
+  position: absolute;
+  width: 150px;
+  right: calc(50% - 75px);
+  bottom: -10px;
   background-color: #f9bd38;
 }
 #node-3 #sectionText, #node-74 #sectionText {
@@ -9670,12 +9677,14 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 
 .page-projects #block-system-main,
+.page-blog #block-system-main,
 .page-news #block-system-main {
   margin-top: 15px;
   padding: 0 10px;
 }
 @media (max-width: 600px) {
   .page-projects #block-system-main,
+.page-blog #block-system-main,
 .page-news #block-system-main {
     margin-top: 0px !important;
     padding: 0 !important;
@@ -11183,50 +11192,83 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 
 .page-projects,
-.page-news, .page-gallery, .page-videos {
+.page-news,
+.page-blog,
+.page-gallery,
+.page-videos {
   overflow-x: hidden;
 }
 .page-projects .page-header,
-.page-news .page-header, .page-gallery .page-header, .page-videos .page-header {
+.page-news .page-header,
+.page-blog .page-header,
+.page-gallery .page-header,
+.page-videos .page-header {
   display: none;
 }
 .page-projects .view-header,
-.page-news .view-header, .page-gallery .view-header, .page-videos .view-header {
+.page-news .view-header,
+.page-blog .view-header,
+.page-gallery .view-header,
+.page-videos .view-header {
   order: 1;
   text-align: left;
   margin: auto;
   width: 100%;
 }
 [dir=ltr] .page-projects .view-header,
-[dir=ltr] .page-news .view-header, [dir=ltr] .page-gallery .view-header, [dir=ltr] .page-videos .view-header {
+[dir=ltr] .page-news .view-header,
+[dir=ltr] .page-blog .view-header,
+[dir=ltr] .page-gallery .view-header,
+[dir=ltr] .page-videos .view-header {
   text-align: right;
 }
 .page-projects .view,
-.page-news .view, .page-gallery .view, .page-videos .view {
+.page-news .view,
+.page-blog .view,
+.page-gallery .view,
+.page-videos .view {
   display: flex;
   flex-direction: column;
 }
 .page-projects .view .view-content,
-.page-news .view .view-content, .page-gallery .view .view-content, .page-videos .view .view-content {
+.page-news .view .view-content,
+.page-blog .view .view-content,
+.page-gallery .view .view-content,
+.page-videos .view .view-content {
   order: 2;
 }
 .page-projects .view .view-content + div,
-.page-news .view .view-content + div, .page-gallery .view .view-content + div, .page-videos .view .view-content + div {
+.page-news .view .view-content + div,
+.page-blog .view .view-content + div,
+.page-gallery .view .view-content + div,
+.page-videos .view .view-content + div {
   order: 3;
 }
 .page-projects .main-container .pagination li.active span,
-.page-news .main-container .pagination li.active span, .page-gallery .main-container .pagination li.active span, .page-videos .main-container .pagination li.active span {
+.page-news .main-container .pagination li.active span,
+.page-blog .main-container .pagination li.active span,
+.page-gallery .main-container .pagination li.active span,
+.page-videos .main-container .pagination li.active span {
   background: #3d4798;
   color: white;
 }
 .page-projects .main-container .pagination a:hover,
-.page-news .main-container .pagination a:hover, .page-gallery .main-container .pagination a:hover, .page-videos .main-container .pagination a:hover {
+.page-news .main-container .pagination a:hover,
+.page-blog .main-container .pagination a:hover,
+.page-gallery .main-container .pagination a:hover,
+.page-videos .main-container .pagination a:hover {
   background: #3d4798;
   color: white;
 }
 .page-projects .main-container .pagination span, .page-projects .main-container .pagination a,
 .page-news .main-container .pagination span,
-.page-news .main-container .pagination a, .page-gallery .main-container .pagination span, .page-gallery .main-container .pagination a, .page-videos .main-container .pagination span, .page-videos .main-container .pagination a {
+.page-news .main-container .pagination a,
+.page-blog .main-container .pagination span,
+.page-blog .main-container .pagination a,
+.page-gallery .main-container .pagination span,
+.page-gallery .main-container .pagination a,
+.page-videos .main-container .pagination span,
+.page-videos .main-container .pagination a {
   background: #eee;
   border: none;
   color: black;
@@ -11236,59 +11278,98 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 [dir=ltr] .page-projects .main-container .pagination span, [dir=ltr] .page-projects .main-container .pagination a,
 [dir=ltr] .page-news .main-container .pagination span,
-[dir=ltr] .page-news .main-container .pagination a, [dir=ltr] .page-gallery .main-container .pagination span, [dir=ltr] .page-gallery .main-container .pagination a, [dir=ltr] .page-videos .main-container .pagination span, [dir=ltr] .page-videos .main-container .pagination a {
+[dir=ltr] .page-news .main-container .pagination a,
+[dir=ltr] .page-blog .main-container .pagination span,
+[dir=ltr] .page-blog .main-container .pagination a,
+[dir=ltr] .page-gallery .main-container .pagination span,
+[dir=ltr] .page-gallery .main-container .pagination a,
+[dir=ltr] .page-videos .main-container .pagination span,
+[dir=ltr] .page-videos .main-container .pagination a {
   float: left;
 }
 .page-projects .main-container .view-filters,
-.page-news .main-container .view-filters, .page-gallery .main-container .view-filters, .page-videos .main-container .view-filters {
+.page-news .main-container .view-filters,
+.page-blog .main-container .view-filters,
+.page-gallery .main-container .view-filters,
+.page-videos .main-container .view-filters {
   margin-bottom: 30px;
   padding-bottom: 15px;
   order: 0;
 }
 .page-projects .main-container .view-filters form,
-.page-news .main-container .view-filters form, .page-gallery .main-container .view-filters form, .page-videos .main-container .view-filters form {
+.page-news .main-container .view-filters form,
+.page-blog .main-container .view-filters form,
+.page-gallery .main-container .view-filters form,
+.page-videos .main-container .view-filters form {
   background-color: #eee;
   padding: 5px 0;
   max-width: 1115px;
   font-weight: bold;
 }
 .page-projects .main-container .view-filters form .filter,
-.page-news .main-container .view-filters form .filter, .page-gallery .main-container .view-filters form .filter, .page-videos .main-container .view-filters form .filter {
+.page-news .main-container .view-filters form .filter,
+.page-blog .main-container .view-filters form .filter,
+.page-gallery .main-container .view-filters form .filter,
+.page-videos .main-container .view-filters form .filter {
   display: none;
 }
 .page-projects .main-container .view-filters form .views-exposed-widgets,
-.page-news .main-container .view-filters form .views-exposed-widgets, .page-gallery .main-container .view-filters form .views-exposed-widgets, .page-videos .main-container .view-filters form .views-exposed-widgets {
+.page-news .main-container .view-filters form .views-exposed-widgets,
+.page-blog .main-container .view-filters form .views-exposed-widgets,
+.page-gallery .main-container .view-filters form .views-exposed-widgets,
+.page-videos .main-container .view-filters form .views-exposed-widgets {
   margin-bottom: 0 !important;
 }
 .page-projects .main-container .view-filters form label,
-.page-news .main-container .view-filters form label, .page-gallery .main-container .view-filters form label, .page-videos .main-container .view-filters form label {
+.page-news .main-container .view-filters form label,
+.page-blog .main-container .view-filters form label,
+.page-gallery .main-container .view-filters form label,
+.page-videos .main-container .view-filters form label {
   display: none !important;
 }
 .page-projects .main-container .view-filters form .form-control, .page-projects .main-container .view-filters form .form-item-created-max,
 .page-news .main-container .view-filters form .form-control,
-.page-news .main-container .view-filters form .form-item-created-max, .page-gallery .main-container .view-filters form .form-control, .page-gallery .main-container .view-filters form .form-item-created-max, .page-videos .main-container .view-filters form .form-control, .page-videos .main-container .view-filters form .form-item-created-max {
+.page-news .main-container .view-filters form .form-item-created-max,
+.page-blog .main-container .view-filters form .form-control,
+.page-blog .main-container .view-filters form .form-item-created-max,
+.page-gallery .main-container .view-filters form .form-control,
+.page-gallery .main-container .view-filters form .form-item-created-max,
+.page-videos .main-container .view-filters form .form-control,
+.page-videos .main-container .view-filters form .form-item-created-max {
   width: 195px;
   border-radius: 0 !important;
 }
 .page-projects .main-container .view-filters form [id^=edit-submit-],
-.page-news .main-container .view-filters form [id^=edit-submit-], .page-gallery .main-container .view-filters form [id^=edit-submit-], .page-videos .main-container .view-filters form [id^=edit-submit-] {
+.page-news .main-container .view-filters form [id^=edit-submit-],
+.page-blog .main-container .view-filters form [id^=edit-submit-],
+.page-gallery .main-container .view-filters form [id^=edit-submit-],
+.page-videos .main-container .view-filters form [id^=edit-submit-] {
   background-color: #3d4798;
   border-color: #3d4798;
   font-size: 0;
 }
 .page-projects .main-container .view-filters form [id^=edit-submit-]:before,
-.page-news .main-container .view-filters form [id^=edit-submit-]:before, .page-gallery .main-container .view-filters form [id^=edit-submit-]:before, .page-videos .main-container .view-filters form [id^=edit-submit-]:before {
+.page-news .main-container .view-filters form [id^=edit-submit-]:before,
+.page-blog .main-container .view-filters form [id^=edit-submit-]:before,
+.page-gallery .main-container .view-filters form [id^=edit-submit-]:before,
+.page-videos .main-container .view-filters form [id^=edit-submit-]:before {
   content: "";
   font-family: "Glyphicons Halflings";
   font-size: 16px;
   color: white;
 }
 .page-projects .main-container .view-filters form #edit-created-wrapper .form-type-textfield,
-.page-news .main-container .view-filters form #edit-created-wrapper .form-type-textfield, .page-gallery .main-container .view-filters form #edit-created-wrapper .form-type-textfield, .page-videos .main-container .view-filters form #edit-created-wrapper .form-type-textfield {
+.page-news .main-container .view-filters form #edit-created-wrapper .form-type-textfield,
+.page-blog .main-container .view-filters form #edit-created-wrapper .form-type-textfield,
+.page-gallery .main-container .view-filters form #edit-created-wrapper .form-type-textfield,
+.page-videos .main-container .view-filters form #edit-created-wrapper .form-type-textfield {
   display: inline-flex;
 }
 .page-projects .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after,
-.page-news .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after, .page-gallery .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after, .page-videos .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after {
+.page-news .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after,
+.page-blog .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after,
+.page-gallery .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after,
+.page-videos .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after {
   content: "";
   font-family: "Glyphicons Halflings";
   position: relative;
@@ -11297,44 +11378,74 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: #807d7d;
 }
 [dir=ltr] .page-projects .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after,
-[dir=ltr] .page-news .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after, [dir=ltr] .page-gallery .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after, [dir=ltr] .page-videos .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after {
+[dir=ltr] .page-news .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after,
+[dir=ltr] .page-blog .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after,
+[dir=ltr] .page-gallery .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after,
+[dir=ltr] .page-videos .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after {
   right: 20px;
   left: unset;
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .page-projects .main-container form,
-.page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
+.page-news .main-container form,
+.page-blog .main-container form,
+.page-gallery .main-container form,
+.page-videos .main-container form {
     padding: 5px 15px !important;
     width: 100vw;
     margin-right: calc(50% - 50vw);
   }
   .page-projects .main-container form .filter + div > .views-exposed-form,
-.page-news .main-container form .filter + div > .views-exposed-form, .page-gallery .main-container form .filter + div > .views-exposed-form, .page-videos .main-container form .filter + div > .views-exposed-form {
+.page-news .main-container form .filter + div > .views-exposed-form,
+.page-blog .main-container form .filter + div > .views-exposed-form,
+.page-gallery .main-container form .filter + div > .views-exposed-form,
+.page-videos .main-container form .filter + div > .views-exposed-form {
     display: none;
   }
   [dir=ltr] .page-projects .main-container form,
-[dir=ltr] .page-news .main-container form, [dir=ltr] .page-gallery .main-container form, [dir=ltr] .page-videos .main-container form {
+[dir=ltr] .page-news .main-container form,
+[dir=ltr] .page-blog .main-container form,
+[dir=ltr] .page-gallery .main-container form,
+[dir=ltr] .page-videos .main-container form {
     margin-left: calc(50% - 50vw);
     margin-right: 0;
   }
   .page-projects .main-container form .form-item-created-min, .page-projects .main-container form .form-item-created-max,
 .page-news .main-container form .form-item-created-min,
-.page-news .main-container form .form-item-created-max, .page-gallery .main-container form .form-item-created-min, .page-gallery .main-container form .form-item-created-max, .page-videos .main-container form .form-item-created-min, .page-videos .main-container form .form-item-created-max {
+.page-news .main-container form .form-item-created-max,
+.page-blog .main-container form .form-item-created-min,
+.page-blog .main-container form .form-item-created-max,
+.page-gallery .main-container form .form-item-created-min,
+.page-gallery .main-container form .form-item-created-max,
+.page-videos .main-container form .form-item-created-min,
+.page-videos .main-container form .form-item-created-max {
     width: 50% !important;
   }
   .page-projects .main-container form .form-item-body-value input, .page-projects .main-container form .form-item-field-body-value input,
 .page-news .main-container form .form-item-body-value input,
-.page-news .main-container form .form-item-field-body-value input, .page-gallery .main-container form .form-item-body-value input, .page-gallery .main-container form .form-item-field-body-value input, .page-videos .main-container form .form-item-body-value input, .page-videos .main-container form .form-item-field-body-value input {
+.page-news .main-container form .form-item-field-body-value input,
+.page-blog .main-container form .form-item-body-value input,
+.page-blog .main-container form .form-item-field-body-value input,
+.page-gallery .main-container form .form-item-body-value input,
+.page-gallery .main-container form .form-item-field-body-value input,
+.page-videos .main-container form .form-item-body-value input,
+.page-videos .main-container form .form-item-field-body-value input {
     max-width: 83%;
   }
   .page-projects .main-container .filter,
-.page-news .main-container .filter, .page-gallery .main-container .filter, .page-videos .main-container .filter {
+.page-news .main-container .filter,
+.page-blog .main-container .filter,
+.page-gallery .main-container .filter,
+.page-videos .main-container .filter {
     padding: 10px 15px 5px 0;
     position: relative;
     display: block !important;
   }
   .page-projects .main-container .filter strong:before,
-.page-news .main-container .filter strong:before, .page-gallery .main-container .filter strong:before, .page-videos .main-container .filter strong:before {
+.page-news .main-container .filter strong:before,
+.page-blog .main-container .filter strong:before,
+.page-gallery .main-container .filter strong:before,
+.page-videos .main-container .filter strong:before {
     content: "";
     position: absolute;
     width: calc(100% - 100px);
@@ -11344,12 +11455,18 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     top: 20px;
   }
   [dir=ltr] .page-projects .main-container .filter strong:before,
-[dir=ltr] .page-news .main-container .filter strong:before, [dir=ltr] .page-gallery .main-container .filter strong:before, [dir=ltr] .page-videos .main-container .filter strong:before {
+[dir=ltr] .page-news .main-container .filter strong:before,
+[dir=ltr] .page-blog .main-container .filter strong:before,
+[dir=ltr] .page-gallery .main-container .filter strong:before,
+[dir=ltr] .page-videos .main-container .filter strong:before {
     left: 65px;
     right: unset;
   }
   .page-projects .main-container .filter strong:after,
-.page-news .main-container .filter strong:after, .page-gallery .main-container .filter strong:after, .page-videos .main-container .filter strong:after {
+.page-news .main-container .filter strong:after,
+.page-blog .main-container .filter strong:after,
+.page-gallery .main-container .filter strong:after,
+.page-videos .main-container .filter strong:after {
     content: "";
     font-family: "Glyphicons Halflings";
     position: absolute;
@@ -11358,19 +11475,28 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     font-weight: normal;
   }
   [dir=ltr] .page-projects .main-container .filter strong:after,
-[dir=ltr] .page-news .main-container .filter strong:after, [dir=ltr] .page-gallery .main-container .filter strong:after, [dir=ltr] .page-videos .main-container .filter strong:after {
+[dir=ltr] .page-news .main-container .filter strong:after,
+[dir=ltr] .page-blog .main-container .filter strong:after,
+[dir=ltr] .page-gallery .main-container .filter strong:after,
+[dir=ltr] .page-videos .main-container .filter strong:after {
     right: 0;
     left: unset;
     margin: 0 15px 0 0;
   }
   .page-projects .main-container .views-submit-button,
-.page-news .main-container .views-submit-button, .page-gallery .main-container .views-submit-button, .page-videos .main-container .views-submit-button {
+.page-news .main-container .views-submit-button,
+.page-blog .main-container .views-submit-button,
+.page-gallery .main-container .views-submit-button,
+.page-videos .main-container .views-submit-button {
     float: left !important;
     width: inherit !important;
     margin-bottom: -50px;
   }
   .page-projects .main-container .views-submit-button button,
-.page-news .main-container .views-submit-button button, .page-gallery .main-container .views-submit-button button, .page-videos .main-container .views-submit-button button {
+.page-news .main-container .views-submit-button button,
+.page-blog .main-container .views-submit-button button,
+.page-gallery .main-container .views-submit-button button,
+.page-videos .main-container .views-submit-button button {
     border-radius: 0;
     position: relative;
     bottom: 50px;
@@ -11381,7 +11507,13 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 @media (max-width: 767px) {
   .page-projects .main-container .view-filters .form-item-created-min, .page-projects .main-container .view-filters .form-item-created-max,
 .page-news .main-container .view-filters .form-item-created-min,
-.page-news .main-container .view-filters .form-item-created-max, .page-gallery .main-container .view-filters .form-item-created-min, .page-gallery .main-container .view-filters .form-item-created-max, .page-videos .main-container .view-filters .form-item-created-min, .page-videos .main-container .view-filters .form-item-created-max {
+.page-news .main-container .view-filters .form-item-created-max,
+.page-blog .main-container .view-filters .form-item-created-min,
+.page-blog .main-container .view-filters .form-item-created-max,
+.page-gallery .main-container .view-filters .form-item-created-min,
+.page-gallery .main-container .view-filters .form-item-created-max,
+.page-videos .main-container .view-filters .form-item-created-min,
+.page-videos .main-container .view-filters .form-item-created-max {
     width: 50% !important;
   }
   .page-projects .main-container .view-filters #edit-title-wrapper,
@@ -11389,41 +11521,73 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-projects .main-container .view-filters [id^=edit-field-],
 .page-news .main-container .view-filters #edit-title-wrapper,
 .page-news .main-container .view-filters #edit-body-value-wrapper,
-.page-news .main-container .view-filters [id^=edit-field-], .page-gallery .main-container .view-filters #edit-title-wrapper,
+.page-news .main-container .view-filters [id^=edit-field-],
+.page-blog .main-container .view-filters #edit-title-wrapper,
+.page-blog .main-container .view-filters #edit-body-value-wrapper,
+.page-blog .main-container .view-filters [id^=edit-field-],
+.page-gallery .main-container .view-filters #edit-title-wrapper,
 .page-gallery .main-container .view-filters #edit-body-value-wrapper,
-.page-gallery .main-container .view-filters [id^=edit-field-], .page-videos .main-container .view-filters #edit-title-wrapper,
+.page-gallery .main-container .view-filters [id^=edit-field-],
+.page-videos .main-container .view-filters #edit-title-wrapper,
 .page-videos .main-container .view-filters #edit-body-value-wrapper,
 .page-videos .main-container .view-filters [id^=edit-field-] {
     width: 98%;
   }
   .page-projects .main-container .view-filters .form-control,
-.page-news .main-container .view-filters .form-control, .page-gallery .main-container .view-filters .form-control, .page-videos .main-container .view-filters .form-control {
+.page-news .main-container .view-filters .form-control,
+.page-blog .main-container .view-filters .form-control,
+.page-gallery .main-container .view-filters .form-control,
+.page-videos .main-container .view-filters .form-control {
     width: 100% !important;
   }
   .page-projects .main-container .view-filters #edit-created-wrapper,
-.page-news .main-container .view-filters #edit-created-wrapper, .page-gallery .main-container .view-filters #edit-created-wrapper, .page-videos .main-container .view-filters #edit-created-wrapper {
+.page-news .main-container .view-filters #edit-created-wrapper,
+.page-blog .main-container .view-filters #edit-created-wrapper,
+.page-gallery .main-container .view-filters #edit-created-wrapper,
+.page-videos .main-container .view-filters #edit-created-wrapper {
     width: 100%;
   }
   .page-projects .main-container .view-filters #edit-created-wrapper .form-type-textfield,
-.page-news .main-container .view-filters #edit-created-wrapper .form-type-textfield, .page-gallery .main-container .view-filters #edit-created-wrapper .form-type-textfield, .page-videos .main-container .view-filters #edit-created-wrapper .form-type-textfield {
+.page-news .main-container .view-filters #edit-created-wrapper .form-type-textfield,
+.page-blog .main-container .view-filters #edit-created-wrapper .form-type-textfield,
+.page-gallery .main-container .view-filters #edit-created-wrapper .form-type-textfield,
+.page-videos .main-container .view-filters #edit-created-wrapper .form-type-textfield {
     margin: 5px 0 !important;
   }
   .page-projects .main-container .view-filters .form-item-field-video-category-tid, .page-projects .main-container .view-filters .form-item-field-video-category-tid, .page-projects .main-container .view-filters .form-item-field-category-tid,
 .page-news .main-container .view-filters .form-item-field-video-category-tid,
 .page-news .main-container .view-filters .form-item-field-video-category-tid,
-.page-news .main-container .view-filters .form-item-field-category-tid, .page-gallery .main-container .view-filters .form-item-field-video-category-tid, .page-gallery .main-container .view-filters .form-item-field-video-category-tid, .page-gallery .main-container .view-filters .form-item-field-category-tid, .page-videos .main-container .view-filters .form-item-field-video-category-tid, .page-videos .main-container .view-filters .form-item-field-video-category-tid, .page-videos .main-container .view-filters .form-item-field-category-tid {
+.page-news .main-container .view-filters .form-item-field-category-tid,
+.page-blog .main-container .view-filters .form-item-field-video-category-tid,
+.page-blog .main-container .view-filters .form-item-field-video-category-tid,
+.page-blog .main-container .view-filters .form-item-field-category-tid,
+.page-gallery .main-container .view-filters .form-item-field-video-category-tid,
+.page-gallery .main-container .view-filters .form-item-field-video-category-tid,
+.page-gallery .main-container .view-filters .form-item-field-category-tid,
+.page-videos .main-container .view-filters .form-item-field-video-category-tid,
+.page-videos .main-container .view-filters .form-item-field-video-category-tid,
+.page-videos .main-container .view-filters .form-item-field-category-tid {
     margin-bottom: 0 !important;
   }
   .page-projects .main-container .view-filters #edit-created-min,
-.page-news .main-container .view-filters #edit-created-min, .page-gallery .main-container .view-filters #edit-created-min, .page-videos .main-container .view-filters #edit-created-min {
+.page-news .main-container .view-filters #edit-created-min,
+.page-blog .main-container .view-filters #edit-created-min,
+.page-gallery .main-container .view-filters #edit-created-min,
+.page-videos .main-container .view-filters #edit-created-min {
     margin-bottom: 5px;
   }
   .page-projects .main-container .view-filters .views-submit-button,
-.page-news .main-container .view-filters .views-submit-button, .page-gallery .main-container .view-filters .views-submit-button, .page-videos .main-container .view-filters .views-submit-button {
+.page-news .main-container .view-filters .views-submit-button,
+.page-blog .main-container .view-filters .views-submit-button,
+.page-gallery .main-container .view-filters .views-submit-button,
+.page-videos .main-container .view-filters .views-submit-button {
     width: 100%;
   }
   .page-projects .main-container .view-filters .views-submit-button [id^=edit-submit-],
-.page-news .main-container .view-filters .views-submit-button [id^=edit-submit-], .page-gallery .main-container .view-filters .views-submit-button [id^=edit-submit-], .page-videos .main-container .view-filters .views-submit-button [id^=edit-submit-] {
+.page-news .main-container .view-filters .views-submit-button [id^=edit-submit-],
+.page-blog .main-container .view-filters .views-submit-button [id^=edit-submit-],
+.page-gallery .main-container .view-filters .views-submit-button [id^=edit-submit-],
+.page-videos .main-container .view-filters .views-submit-button [id^=edit-submit-] {
     width: 98%;
     margin-bottom: 15px;
   }
@@ -11432,9 +11596,14 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-projects .main-container #block-block-7,
 .page-news .main-container #block-block-3,
 .page-news .main-container #block-block-4,
-.page-news .main-container #block-block-7, .page-gallery .main-container #block-block-3,
+.page-news .main-container #block-block-7,
+.page-blog .main-container #block-block-3,
+.page-blog .main-container #block-block-4,
+.page-blog .main-container #block-block-7,
+.page-gallery .main-container #block-block-3,
 .page-gallery .main-container #block-block-4,
-.page-gallery .main-container #block-block-7, .page-videos .main-container #block-block-3,
+.page-gallery .main-container #block-block-7,
+.page-videos .main-container #block-block-3,
 .page-videos .main-container #block-block-4,
 .page-videos .main-container #block-block-7 {
     padding: 0px 0px;
@@ -11443,33 +11612,60 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 @media (min-width: 1000px) and (max-width: 1200px) {
   .page-projects .main-container .form-control, .page-projects .main-container .form-item-created-max,
 .page-news .main-container .form-control,
-.page-news .main-container .form-item-created-max, .page-gallery .main-container .form-control, .page-gallery .main-container .form-item-created-max, .page-videos .main-container .form-control, .page-videos .main-container .form-item-created-max {
+.page-news .main-container .form-item-created-max,
+.page-blog .main-container .form-control,
+.page-blog .main-container .form-item-created-max,
+.page-gallery .main-container .form-control,
+.page-gallery .main-container .form-item-created-max,
+.page-videos .main-container .form-control,
+.page-videos .main-container .form-item-created-max {
     width: 158px !important;
   }
   .page-projects .main-container form,
-.page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
+.page-news .main-container form,
+.page-blog .main-container form,
+.page-gallery .main-container form,
+.page-videos .main-container form {
     max-width: 920px !important;
   }
 }
 @media (min-width: 991px) and (max-width: 1000px) {
   .page-projects .main-container form,
-.page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
+.page-news .main-container form,
+.page-blog .main-container form,
+.page-gallery .main-container form,
+.page-videos .main-container form {
     width: 920px !important;
   }
   .page-projects .main-container form .form-control, .page-projects .main-container form .form-item-created-max,
 .page-news .main-container form .form-control,
-.page-news .main-container form .form-item-created-max, .page-gallery .main-container form .form-control, .page-gallery .main-container form .form-item-created-max, .page-videos .main-container form .form-control, .page-videos .main-container form .form-item-created-max {
+.page-news .main-container form .form-item-created-max,
+.page-blog .main-container form .form-control,
+.page-blog .main-container form .form-item-created-max,
+.page-gallery .main-container form .form-control,
+.page-gallery .main-container form .form-item-created-max,
+.page-videos .main-container form .form-control,
+.page-videos .main-container form .form-item-created-max {
     width: 125px !important;
   }
 }
 @media (min-width: 768px) and (max-width: 990px) {
   .page-projects .main-container .form-control, .page-projects .main-container .form-item-created-max,
 .page-news .main-container .form-control,
-.page-news .main-container .form-item-created-max, .page-gallery .main-container .form-control, .page-gallery .main-container .form-item-created-max, .page-videos .main-container .form-control, .page-videos .main-container .form-item-created-max {
+.page-news .main-container .form-item-created-max,
+.page-blog .main-container .form-control,
+.page-blog .main-container .form-item-created-max,
+.page-gallery .main-container .form-control,
+.page-gallery .main-container .form-item-created-max,
+.page-videos .main-container .form-control,
+.page-videos .main-container .form-item-created-max {
     width: 110px !important;
   }
   .page-projects .main-container form,
-.page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
+.page-news .main-container form,
+.page-blog .main-container form,
+.page-gallery .main-container form,
+.page-videos .main-container form {
     max-width: 700px !important;
   }
 }
@@ -12808,8 +13004,8 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   font-family: fanum;
   font-style: normal;
   font-weight: 100;
-  src: url("../fonts/dana/fanum/dana-fanum-regular.eot");
-  src: url("../fonts/dana/fanum/dana-fanum-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/dana/fanum/dana-fanum-regular.woff2") format("woff2"), url("../fonts/dana/fanum/dana-fanum-regular.woff") format("woff"), url("../fonts/dana/ttf/Dana-FaNum-Medium.ttf") format("truetype");
+  src: url("../fonts/sans/fanum/fanum.eot");
+  src: url("../fonts/sans/fanum/fanum.eot?#iefix") format("embedded-opentype"), url("../fonts/sans/fanum/fanum.woff2") format("woff2"), url("../fonts/sans/fanum/fanum.woff") format("woff"), url("../fonts/sans/fanum/fanum.ttf") format("truetype");
 }
 .m-0 {
   margin: 0 !important;

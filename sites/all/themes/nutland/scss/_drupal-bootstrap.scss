@@ -11,6 +11,11 @@ $ltr:                 "[dir='ltr'] &";
 
 @import url('/sites/all/libraries/persiandatepicker/persian-datepicker.min.css');
 // Drop shadows.
+@media all and (min-width: 1500px) {
+  .container {
+    width: 1450px;
+  }
+}
 @mixin box-shadow($shadow) {
   -webkit-box-shadow: $shadow;
      -moz-box-shadow: $shadow;
@@ -1849,21 +1854,23 @@ a {
     display: flex;
     margin-top: 20px;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
+    position: relative;
+    text-align: center;
     .mb-0{
-      font-size: 18px;
-      margin: 0 10px;
-      color:#3d4798;
+      font-size: 20px;
+      margin: 0 auto;
+      color: #3d4798;
       font-weight: bold;
       text-transform: uppercase;
     }
     &:after, &:before{
       content: "";
-      height: 2px;
-      -webkit-box-flex: 1;
-      -ms-flex: auto;
-      flex: auto;
-      display: block;
+      height: 3px;
+      position: absolute;
+      width: 150px;
+      right: calc(50% - 75px);
+      bottom: -10px;
       background-color: #f9bd38;
     }
   }
@@ -2429,6 +2436,7 @@ a {
 }
 //news main page
 .page-projects,
+.page-blog,
 .page-news{
   #block-system-main{
     margin-top: 15px;
@@ -3998,7 +4006,10 @@ a {
 }
 //page videos, gallery, news search
 .page-projects,
-.page-news, .page-gallery, .page-videos{
+.page-news,
+.page-blog,
+.page-gallery,
+.page-videos{
   overflow-x: hidden;
   .page-header {
     display: none;

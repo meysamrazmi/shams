@@ -300,8 +300,13 @@ $lang = $language->language;
     }
   }
   #last .view-news .views-field-created {
+    position: absolute;
+    left: 15px;
+  }
+  #last .view-news .views-field-title {
     border-bottom: 1px solid #C4C4C4;
     margin-bottom: 10px;
+    padding-left: 80px;
   }
   #last .view-news .views-field-created > span {
     display: flex;
@@ -393,7 +398,11 @@ $lang = $language->language;
   }
   #last .items_text .caption {
     top: auto;
-    bottom: 1.25rem
+    bottom: 1.25rem;
+    transition: all .5s ease-in-out;
+  }
+  #last .items_text:hover .caption {
+    border-color: #ffc20e;
   }
   #last .items_text .caption h4 {
     line-height: 20px;
@@ -408,7 +417,7 @@ $lang = $language->language;
     -ms-flex-pack: end;
     justify-content: flex-end;
     transition: width .5s ease-in-out;
-    background-color: rgba(61, 71, 152, .5);
+    background-color: rgba(0, 0, 0, .5);
     padding-bottom: 1.875rem;
     -webkit-transition: all .5s ease-in-out;
     right: 4px;
@@ -445,7 +454,9 @@ $lang = $language->language;
 
 
   /* #gozideha  */
-
+  #gozideha {
+    padding: 50px 0;
+  }
   #gozideha .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -457,7 +468,8 @@ $lang = $language->language;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.3333333333%;
     flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%
+    max-width: 33.3333333333%;
+    padding: 0;
   }
   #gozideha .caption span {
     line-height: 1.2;
@@ -527,7 +539,7 @@ $lang = $language->language;
     transition: all .4s ease-in-out;
     min-width: 100%;
     height: auto;
-    filter: grayscale(1);
+    filter: grayscale(0.5);
   }
   #gozideha .items .caption_wrap {
     top: 3.125rem;

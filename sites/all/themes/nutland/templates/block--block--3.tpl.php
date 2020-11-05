@@ -18,6 +18,7 @@ $lang = $language->language;
       $node = node_load(122);
       break;
     case 'news':
+    case 'blog':
       $node = node_load(91);
       break;
     case 'videos':
